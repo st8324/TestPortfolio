@@ -1,4 +1,4 @@
-package kr.green.testportfolio;
+package kr.green.testportfolio.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -32,8 +32,8 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("serverTime", formattedDate );
-		
-		return "home";
+		model.addAttribute("title", "테스트");
+		return "/main/home";
 	}
 	
 }
